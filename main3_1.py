@@ -74,7 +74,9 @@ def create_bm25_index(chunks: List[dict]) -> BM25Retriever:
     return bm25_retriever
 
 # --- Main execution ---
-pdf_dir = "data/docs"  # Path to your PDF directory
+# pdf_dir = "data/docs"  # Path to your PDF directory
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+pdf_dir = os.path.join(BASE_DIR, "data", "docs")
 persist_dir = "db"     # Directory to store Chroma DB
 
 # 1. Read PDFs and create chunks (do this once)
