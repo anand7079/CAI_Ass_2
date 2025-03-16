@@ -18,9 +18,9 @@ from langchain.docstore.document import Document
 from rank_bm25 import BM25Okapi
 from typing import List
 import sys
-import pysqlite3
+# import pysqlite3
 
-sys.modules["sqlite3"] = pysqlite3  # Override default sqlite3 with pysqlite3
+# sys.modules["sqlite3"] = pysqlite3  # Override default sqlite3 with pysqlite3
 import streamlit as st
 import ollama
 
