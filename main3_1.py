@@ -22,7 +22,6 @@ import pysqlite3
 
 sys.modules["sqlite3"] = pysqlite3  # Override default sqlite3 with pysqlite3
 import streamlit as st
-st.run(host="127.0.0.1", port=8501)
 st.set_page_config(page_title="My Streamlit App")
 
 
