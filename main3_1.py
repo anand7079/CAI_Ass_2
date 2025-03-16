@@ -17,6 +17,11 @@ from langchain_community.retrievers import BM25Retriever
 from langchain.docstore.document import Document
 from rank_bm25 import BM25Okapi
 from typing import List
+import sys
+import pysqlite3
+
+sys.modules["sqlite3"] = pysqlite3  # Override default sqlite3 with pysqlite3
+
 
 
 # In[5]:

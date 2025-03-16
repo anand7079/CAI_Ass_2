@@ -1,6 +1,7 @@
 
 setuptools>=58.0.0
 numpy==1.26.4
+pysqlite3-binary
 # Langchain Core Functionality
 langchain==0.3.19                 # Required for core Langchain functionality (chains, retrievers, memory)
 langchain-community==0.3.18    # Required for document loaders and vector stores
