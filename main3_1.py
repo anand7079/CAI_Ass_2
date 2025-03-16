@@ -22,7 +22,18 @@ import pysqlite3
 
 sys.modules["sqlite3"] = pysqlite3  # Override default sqlite3 with pysqlite3
 import streamlit as st
-st.set_page_config(page_title="My Streamlit App")
+import ollama
+
+# Streamlit UI
+st.title("Ollama Chatbot with Streamlit")
+
+# User input
+user_input = st.text_input("Ask a question:")
+
+if user_input:
+    response = ollama.chat(model="llama2", messages=[{"role": "user", "content": user_input}])
+    st.write("**Response:**", response['message']['content'])
+
 
 
 
