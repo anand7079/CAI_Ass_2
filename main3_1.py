@@ -21,6 +21,8 @@ import sys
 import pysqlite3
 
 sys.modules["sqlite3"] = pysqlite3  # Override default sqlite3 with pysqlite3
+import streamlit as st
+st.set_page_config(page_title="My Streamlit App")
 
 
 
